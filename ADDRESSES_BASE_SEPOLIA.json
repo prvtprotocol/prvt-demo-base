@@ -1,0 +1,10 @@
+{
+  "_comment": "Update these addresses after deployment to Base Sepolia testnet",
+  "StealthRegistry": "0x0000000000000000000000000000000000000000",
+  "StealthAnnouncer": "0x0000000000000000000000000000000000000000",
+  "GasTank": "0x0000000000000000000000000000000000000000",
+  "deployed_at": "",
+  "chain_id": 84532,
+  "network": "Base Sepolia"
+}
+

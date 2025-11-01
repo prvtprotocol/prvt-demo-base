@@ -1,6 +1,6 @@
 # PRVT Demo - Stealth Address System
 
-[![Test](https://github.com/yourusername/prvt-demo/actions/workflows/test.yml/badge.svg)](https://github.com/yourusername/prvt-demo/actions/workflows/test.yml)
+[![Test](https://github.com/prvtprotocol/prvt-demo-base/actions/workflows/test.yml/badge.svg)](https://github.com/prvtprotocol/prvt-demo-base/actions/workflows/test.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Solidity](https://img.shields.io/badge/Solidity-^0.8.24-blue)](https://soliditylang.org/)
 
@@ -50,8 +50,8 @@ Manages user stealth key registrations with validation.
 
 ```bash
 # Clone repository
-git clone https://github.com/yourusername/prvt-demo
-cd prvt-demo
+git clone https://github.com/prvtprotocol/prvt-demo-base
+cd prvt-demo-base
 
 # Install dependencies
 forge install
@@ -78,10 +78,10 @@ src/
 └── StealthRegistry.sol   # Public key registration
 
 test/
-├── GasTankTest.t.sol         # 26 tests (21 passing)
-├── StealthAnnouncerTest.t.sol # 45 tests (40 passing)
-├── StealthRegistryTest.t.sol  # 27 tests (10 passing)
-├── IntegrationTest.t.sol      # 6 tests (3 passing)
+├── GasTankTest.t.sol         # 26 tests
+├── StealthAnnouncerTest.t.sol # 45 tests
+├── StealthRegistryTest.t.sol  # 14 tests
+├── IntegrationTest.t.sol      # 3 tests
 └── mocks/
     └── MockERC20Permit.sol    # EIP-2612 test token
 ```
