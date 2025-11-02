@@ -12,8 +12,8 @@ foundryup
 
 2. Clone and setup:
 ```bash
-git clone https://github.com/yourusername/prvt-demo
-cd prvt-demo
+git clone https://github.com/prvtprotocol/prvt-demo-base
+cd prvt-demo-base
 forge install
 ```
 
