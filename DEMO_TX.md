@@ -4,33 +4,32 @@ This document contains links to on-chain transactions demonstrating the PRVT ste
 
 ## 📋 Contract Addresses
 
-Update these after deployment:
-
-- **StealthRegistry**: [0x...](https://sepolia.basescan.org/address/0x...)
-- **StealthAnnouncer**: [0x...](https://sepolia.basescan.org/address/0x...)
-- **GasTank**: [0x...](https://sepolia.basescan.org/address/0x...)
+- **StealthRegistry**: [0xA4cd92f81596F55D78227F0f57DF7D105432407F](https://sepolia.basescan.org/address/0xA4cd92f81596F55D78227F0f57DF7D105432407F)
+- **StealthAnnouncer**: [0xf1Df5d9725A54a968f65365Cc84ddE3d7773ae63](https://sepolia.basescan.org/address/0xf1Df5d9725A54a968f65365Cc84ddE3d7773ae63)
+- **GasTank**: [0x93335Def5273Fa05F6cbba431E1Ca1CB89b16514](https://sepolia.basescan.org/address/0x93335Def5273Fa05F6cbba431E1Ca1CB89b16514)
 
 See `ADDRESSES_BASE_SEPOLIA.json` for complete deployment details.
 
 ## 🔗 Demo Transactions
 
-Update these transaction hashes after running `script/Demo.s.sol`:
-
 ### 1. Key Registration
-- **Function**: `register()` / `setKeys()`
-- **Transaction**: [0x...](https://sepolia.basescan.org/tx/0x...)
+- **Function**: `setKeys(bytes calldata viewingKey, bytes calldata spendingKey)`
+- **Transaction**: [0x957c890255cea702cb9aed2e63ceb2d72e041944001104802439c6ac11dc6ddb](https://sepolia.basescan.org/tx/0x957c890255cea702cb9aed2e63ceb2d72e041944001104802439c6ac11dc6ddb)
 - **Description**: Register viewing and spending keys for stealth address receipt
+- **Contract**: StealthRegistry
 
 ### 2. Ephemeral Key Announcement
-- **Function**: `announce(bytes calldata ephemeralPublicKey, uint256 fee)`
-- **Transaction**: [0x...](https://sepolia.basescan.org/tx/0x...)
+- **Function**: `announce(bytes calldata ephemeralPubkey, address token, uint256 amount, bytes calldata hint)`
+- **Transaction**: [0x4a094afe3084857e7a13bec9072cb22ad737bdf96299668eeeb340ba8a947809](https://sepolia.basescan.org/tx/0x4a094afe3084857e7a13bec9072cb22ad737bdf96299668eeeb340ba8a947809)
 - **Description**: Broadcast ephemeral public key for stealth payment
+- **Contract**: StealthAnnouncer
 
 ### 3. GasTank Deposit & Withdrawal
-- **Function**: `deposit(bytes32 hash)` → `withdraw(bytes32 secret, address recipient)`
-- **Deposit TX**: [0x...](https://sepolia.basescan.org/tx/0x...)
-- **Withdraw TX**: [0x...](https://sepolia.basescan.org/tx/0x...)
-- **Description**: Demonstrate unlinkable gas funding via hash commitments
+- **Function**: `deposit(bytes32 h)` → `withdraw(bytes calldata secret)`
+- **Deposit TX**: [0x52558611cee285f85f2c5468b7ecdec5718eb852c55e0e0f6999a3af4acba339](https://sepolia.basescan.org/tx/0x52558611cee285f85f2c5468b7ecdec5718eb852c55e0e0f6999a3af4acba339)
+- **Withdraw TX**: [0x86943b55969c7090cebd25c04a656d64f9f6a17165d5ed907114df53f6c0f6b6](https://sepolia.basescan.org/tx/0x86943b55969c7090cebd25c04a656d64f9f6a17165d5ed907114df53f6c0f6b6)
+- **Description**: Demonstrate unlinkable gas funding via hash commitments (0.001 ETH deposit → withdrawal)
+- **Contract**: GasTank
 
 ## 📝 Instructions
 

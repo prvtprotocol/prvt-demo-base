@@ -1,10 +1,11 @@
 {
-  "_comment": "Update these addresses after deployment to Base Sepolia testnet",
-  "StealthRegistry": "0x0000000000000000000000000000000000000000",
-  "StealthAnnouncer": "0x0000000000000000000000000000000000000000",
-  "GasTank": "0x0000000000000000000000000000000000000000",
-  "deployed_at": "",
+  "_comment": "Deployed contracts on Base Sepolia testnet",
+  "StealthRegistry": "0xA4cd92f81596F55D78227F0f57DF7D105432407F",
+  "StealthAnnouncer": "0xf1Df5d9725A54a968f65365Cc84ddE3d7773ae63",
+  "GasTank": "0x93335Def5273Fa05F6cbba431E1Ca1CB89b16514",
+  "deployed_at": "2025-01-27",
   "chain_id": 84532,
-  "network": "Base Sepolia"
+  "network": "Base Sepolia",
+  "explorer": "https://sepolia.basescan.org"
 }
 

@@ -10,10 +10,10 @@ import {GasTank} from "../src/GasTank.sol";
 /// @notice Executes a minimal stealth address flow for demonstration
 /// @dev Update REGISTRY, ANNOUNCER, GASTANK addresses after deployment
 contract Demo is Script {
-    // Fill after deploy or load from env/JSON if you prefer
-    address constant REGISTRY = 0x0000000000000000000000000000000000000000;
-    address constant ANNOUNCER = 0x0000000000000000000000000000000000000000;
-    address constant GASTANK = 0x0000000000000000000000000000000000000000;
+    // Deployed addresses on Base Sepolia
+    address constant REGISTRY = 0xA4cd92f81596F55D78227F0f57DF7D105432407F;
+    address constant ANNOUNCER = 0xf1Df5d9725A54a968f65365Cc84ddE3d7773ae63;
+    address constant GASTANK = 0x93335Def5273Fa05F6cbba431E1Ca1CB89b16514;
 
     // Helper to generate 65-byte uncompressed public key (0x04 + 32 bytes X + 32 bytes Y)
     function _makeKey(uint256 seed) internal pure returns (bytes memory) {
@@ -37,14 +37,14 @@ contract Demo is Script {
         // 2) Announce an ephemeral pubkey (65 bytes uncompressed secp256k1)
         StealthAnnouncer announcer = StealthAnnouncer(ANNOUNCER);
         bytes memory ephem = _makeKey(3);
-        announcer.announce(ephem, 0); // fee=0 for demo
+        announcer.announce(ephem, address(0), 0, ""); // ETH payment, 0 amount, no hint
 
         // 3) Deposit and withdraw small amount through GasTank to show unlinkable flow
-        GasTank gasTank = GasTank(GASTANK);
-        bytes32 secret = bytes32(uint256(123));
+        address payable gasTankAddr = payable(GASTANK);
+        bytes memory secret = abi.encodePacked(bytes32(uint256(123)));
         bytes32 h = keccak256(abi.encodePacked(secret, sender));
-        gasTank.deposit{value: 1000000000000000}(h); // 0.001 ETH
-        gasTank.withdraw(secret, sender);
+        GasTank(gasTankAddr).deposit{value: 1000000000000000}(h); // 0.001 ETH
+        GasTank(gasTankAddr).withdraw(secret);
 
         vm.stopBroadcast();
     }
