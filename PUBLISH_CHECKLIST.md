@@ -62,26 +62,35 @@
 - [ ] Video walkthrough
 - [ ] Bug bounty / responsible disclosure programme
 
-## 🎯 **CURRENT STATUS: 8.5/10**
+### Deployment
+- [x] Deployed to Base Sepolia testnet
+- [x] All contracts verified on Basescan
+- [x] Demo transactions recorded
+- [x] Deployment addresses documented (ADDRESSES_BASE_SEPOLIA.json)
+- [x] Transaction verification report (VERIFICATION_REPORT.md)
+- [x] One-click demo script (script/Demo.s.sol)
+
+## 🎯 **CURRENT STATUS: 9/10 - TESTNET READY**
 
 ### What You Have
-✅ Production-grade smart contract suite with full passing tests  
+✅ Production-grade smart contract suite with full passing tests (88/88)  
 ✅ Professional documentation & security disclosures  
 ✅ CI pipeline + coverage report  
-✅ Clean repository ready for public consumption
+✅ Clean repository ready for public consumption  
+✅ Deployed to Base Sepolia with verified contracts  
+✅ Live demo transactions on Basescan  
+✅ Complete verification report
 
 ### Remaining Gaps
 ⚠️ No external security audit yet  
-⚠️ Gas benchmark narrative not yet documented  
 ⚠️ Ancillary community files (CoC, templates) still pending
 
 ## 📝 **RECOMMENDATION**
 
-Publish as **v0.9.0** with clear “Audit Pending” notice. Add real badges and continue iteration.
+**Ready for public GitHub push** as testnet demo repository with clear "Audit Pending" notice.
 
 ## 🚀 **NEXT STEPS**
-1. Schedule or perform peer security review  
-2. Produce gas benchmarking summary  
-3. Add community / governance docs (CoC, issue templates)  
-4. Tag release `v0.9.0` and deploy to testnet  
+1. Schedule professional security audit before mainnet  
+2. Add community docs (CoC, issue templates) if public contributions expected  
+3. Tag release `v1.0.0-testnet` after audit completion  
 
