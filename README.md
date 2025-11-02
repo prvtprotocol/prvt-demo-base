@@ -1,6 +1,7 @@
 # PRVT Demo - Stealth Address System
 
-[![Test](https://github.com/prvtprotocol/prvt-demo-base/actions/workflows/test.yml/badge.svg)](https://github.com/prvtprotocol/prvt-demo-base/actions/workflows/test.yml)
+[![Base Sepolia](https://img.shields.io/badge/network-Base%20Sepolia-blue)](https://sepolia.basescan.org/)
+[![Tests Passing](https://github.com/prvtprotocol/prvt-demo-base/actions/workflows/test.yml/badge.svg)](https://github.com/prvtprotocol/prvt-demo-base/actions/workflows/test.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Solidity](https://img.shields.io/badge/Solidity-^0.8.24-blue)](https://soliditylang.org/)
 
@@ -75,6 +76,36 @@ forge test --gas-report
 # Check coverage
 forge coverage
 ```
+
+## 🎬 Quick Demo
+
+### See It Live
+
+Visit the verified contracts on Base Sepolia:
+
+- **[StealthRegistry](https://sepolia.basescan.org/address/0xA4cd92f81596F55D78227F0f57DF7D105432407F)** - Public key registry
+- **[StealthAnnouncer](https://sepolia.basescan.org/address/0xf1Df5d9725A54a968f65365Cc84ddE3d7773ae63)** - Ephemeral key announcements
+- **[GasTank](https://sepolia.basescan.org/address/0x93335Def5273Fa05F6cbba431E1Ca1CB89b16514)** - Unlinkable gas funding
+
+### Live Demo Transactions
+
+View the complete stealth address flow on-chain:
+
+1. **[Key Registration](https://sepolia.basescan.org/tx/0x957c890255cea702cb9aed2e63ceb2d72e041944001104802439c6ac11dc6ddb)** - Register viewing/spending keys
+2. **[Ephemeral Announcement](https://sepolia.basescan.org/tx/0x4a094afe3084857e7a13bec9072cb22ad737bdf96299668eeeb340ba8a947809)** - Broadcast stealth payment
+3. **[GasTank Deposit](https://sepolia.basescan.org/tx/0x52558611cee285f85f2c5468b7ecdec5718eb852c55e0e0f6999a3af4acba339)** - Unlinkable ETH deposit (0.001 ETH)
+4. **[GasTank Withdraw](https://sepolia.basescan.org/tx/0x86943b55969c7090cebd25c04a656d64f9f6a17165d5ed907114df53f6c0f6b6)** - Secret reveal & withdrawal
+
+### Reproduce Locally
+
+Run the demo script to execute the same flow:
+
+```bash
+# Set up .env with PRIVATE_KEY and RPC_BASE_SEPOLIA
+forge script script/Demo.s.sol --rpc-url base_sepolia --broadcast
+```
+
+Check the new transaction hashes on [Basescan](https://sepolia.basescan.org/).
 
 ## 🏗️ Architecture
 
