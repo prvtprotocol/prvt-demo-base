@@ -41,6 +41,13 @@ Manages user stealth key registrations with validation.
 - Prevents same key reuse for both roles
 - Gas-optimized zero-key checking
 
+## 🌐 Connect & Socials
+
+- **GitHub**: [@prvtprotocol](https://github.com/prvtprotocol/prvt-demo-base)
+- **Twitter/X**: [@PRVTprotocol](https://x.com/PRVTprotocol)
+- **TikTok**: [@prvtbase](https://www.tiktok.com/@prvtbase)
+- **Reddit**: [u/Individual_Big9893](https://www.reddit.com/user/Individual_Big9893/)
+
 ## 📋 Prerequisites
 
 - [Foundry](https://getfoundry.sh/)
@@ -179,12 +186,19 @@ Contributions welcome! Please:
 
 [MIT](LICENSE) - see LICENSE file for details
 
-## 🔗 Resources
+## 🔗 Resources & Links
 
+### Documentation
 - [Foundry Book](https://book.getfoundry.sh/)
 - [Solidity Documentation](https://docs.soliditylang.org/)
 - [OpenZeppelin Contracts](https://docs.openzeppelin.com/contracts/)
 - [EIP-5564 Stealth Addresses](https://eips.ethereum.org/EIPS/eip-5564)
+
+### Social Media
+- **GitHub**: [prvtprotocol/prvt-demo-base](https://github.com/prvtprotocol/prvt-demo-base)
+- **Twitter/X**: [@PRVTprotocol](https://x.com/PRVTprotocol)
+- **TikTok**: [@prvtbase](https://www.tiktok.com/@prvtbase)
+- **Reddit**: [u/Individual_Big9893](https://www.reddit.com/user/Individual_Big9893/)
 
 ## ⚡ Gas Optimization
 
